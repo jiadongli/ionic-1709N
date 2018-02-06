@@ -1,0 +1,38 @@
+WEBAPP Day01
+
+1. WEBAPP = WEB（基本的前端技术） + APP（移动端应用程序）
+2. 移动端应用程序的开发技术：
+	2.1 Native 原生开发 
+			Android：Java/Kotlin
+			iOS: Objective C/Swift
+	2.2 WEB 应用：基本的前端技术，浏览器访问
+	2.3 React Native：Facebook
+	2.4 Ionic 离子
+3. Ionic 官网
+	Build amazing apps in one codebase, for any platform, with the web.
+	一次编写，到处运行
+4. Ionic 使用的技术
+	HTML，CSS（SCSS），JavaScript，ng
+5. 开源，免费：FOSS = Free OpenSource Software
+6. 样式风格贴近于原生应用
+7. 社区活跃
+8. CLI 很强大
+8. 创建一个 Ionic 的 Hello World 程序
+9. 执行命令行命令：
+	9.1 命令的作用
+	9.2 命令的位置
+	9.3 命令的输出
+	9.4 命令的结果
+10. 基于 Node.js 安装 Ionic：npm install -g ionic
+11. 安装 Cordova：npm install -g cordova
+	 官网：https://cordova.apache.org
+12. 解压缩 node_modules.zip，把 ionic 和 cordova 目录放到 node 的全局模块目录下：
+	C:\Users\web-01\AppData\Roaming\npm\node_modules
+	（其中 AppData 是隐藏目录）
+13. 在 Webstorm 中创建一个项目
+
+
+
+
+
+
