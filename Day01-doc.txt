@@ -4,8 +4,9 @@ WEBAPP Day01
 1. WEBAPP = WEB（基本的前端技术） + APP（移动端应用程序）
 2. 移动端应用程序的开发技术：
 	2.1 Native 原生开发 
-			Android：Java/Kotlin
-			iOS: Objective C/Swift
+        a. Android：Java/Kotlin
+        b. iOS: Objective C/Swift
+        c. Others: 0.02%
 	2.2 WEB 应用：基本的前端技术，浏览器访问
 	2.3 React Native：Facebook
 	2.4 Ionic 离子
@@ -13,81 +14,88 @@ WEBAPP Day01
 	Build amazing apps in one codebase, for any platform, with the web.
 	一次编写，到处运行
 4. Ionic 使用的技术
-	HTML，CSS（SCSS），JavaScript，Angular, Cordova
+   a. HTML
+   b. CSS（SCSS）
+   c. JavaScript
+   d. Angular
+   e. Cordova
 5. 开源，免费：FOSS = Free OpenSource Software
 6. 样式风格贴近于原生应用
 7. 社区活跃
-8. CLI 很强大
-8. 创建一个 Ionic 的 Hello World 程序
-9. 执行命令行命令：
-	9.1 命令的作用
-	9.2 命令的位置
-	9.3 命令的输出
-	9.4 命令的结果
-10. 基于 Node.js 安装 Ionic：npm install -g ionic
-11. 安装 Cordova：npm install -g cordova
-	 官网：https://cordova.apache.org
-12. 解压缩 node_modules.zip，把 ionic 和 cordova 目录放到 node 的全局模块目录下：
+8. CLI 强大
+9. 创建一个 Ionic 的 Hello World 程序
+10. 执行命令行命令：
+	10.1 命令的作用
+	10.2 命令的位置
+	10.3 命令的输出
+	10.4 命令的结果
+11. 基于 Node.js 安装 Ionic：npm install -g ionic
+12. 安装 Cordova：npm install -g cordova
+	官网：https://cordova.apache.org
+13. 解压缩 node_modules.zip
+    13.1 把 ionic 和 cordova 目录放到 node 的全局模块目录下
 	C:\Users\web-01\AppData\Roaming\npm\node_modules
 	（其中 AppData 是隐藏目录）
-	查看版本
-	ionic -v 3.19.1
-	cordova -v 8.0.0
-13. 在 Webstorm 中创建一个项目 ionic-1709N
-14. Github客户端
-    Android：octoDroid.apk iOS:codePan
-15. 在项目根目录 app 下执行 Ionic CLI 命令
-		ionic start app blank
-	15.1 目录下，按 Shift + 鼠标右键 - 打开命令行
-	15.2 Webstorm: Alt + F12 打开命令行
-	15.3 命令的作用：使用 blank 空项目模板创建一个 ionic 的项目，名字为 app
-	15.4 创建完成后，Ctrl + C 终止后续操作
-	15.5 在 app 下执行命令：npm install，根据 package.json 配置文件自动下载项目（开发）依赖
-16. 无网络：解压缩 app-blank.zip 为 app 目录，放到项目目录下 ionic-1709N/app
-17. 运行 app 项目：
-		app 下执行命令: ionic serve -l
-18. ionic -v 提示错误：
-		'ionic' 不是内部或外部命令，也不是可运行的程序或批处理文件。
-		解决：解压缩 npm.zip，把 ionic 和 ionic.cmd 两个文件放到
-		C:\Users\web-01\AppData\Roaming\npm\ 目录下
-19. Ionic DevApp.apk 保证手机和电脑在同一个无线网下，看到项目在手机中的实际效果（准确的）
-20. 运行后，项目的改变会实时更新（不稳定，关闭之前的服务：Ctrl + C，再次启动ionic serve -l）
+	13.2 查看版本
+        a. ionic -v 3.19.1
+        b. cordova -v 8.0.0
+14. 在 Webstorm 中创建一个项目 ionic-1709N
+15. Github客户端
+    a. Android：octoDroid.apk
+    b. iOS:codePan
+16. 在项目根目录 app 下执行 Ionic CLI 命令
+	ionic start app blank
+	16.1 目录下，按 Shift + 鼠标右键 - 打开命令行
+	16.2 Webstorm: Alt + F12 打开命令行
+	16.3 命令的作用：使用 blank 空项目模板创建一个 ionic 的项目，名字为 app
+	16.4 创建完成后，Ctrl + C 终止后续操作
+	16.5 在 app 下执行命令：npm install，根据 package.json 配置文件自动下载项目（开发）依赖
+17. 无网络：解压缩 app-blank.zip 为 app 目录，放到项目目录下 ionic-1709N/app
+18. 运行 app 项目：
+    app 下执行命令: ionic serve -l
+19. ionic -v 提示错误：
+    'ionic' 不是内部或外部命令，也不是可运行的程序或批处理文件。
+    解决：解压缩 npm.zip，把 ionic 和 ionic.cmd 两个文件放到
+    C:\Users\web-01\AppData\Roaming\npm\ 目录下
+20. Ionic DevApp.apk 保证手机和电脑在同一个无线网下，看到项目在手机中的实际效果（准确的）
+21. 运行后，项目的改变会实时更新（不稳定，关闭之前的服务：Ctrl + C，再次启动ionic serve -l）
 
 二、Ionic 基本组件
-21. button
-	21.1 基本按钮
-	21.2 外边框按钮
-	21.3 无边框按钮
-	21.4 圆角按钮
-	21.5 圆角块级按钮
-	21.6 非圆角块级按钮
-22. Ionic 创建页面
-	在 Ionic-1709N/app 下执行命令：ionic generate page button
-23. Ionic 页面跳转
-	23.1 修改文件 src/app/app.module.ts
-			a. 引入新创建的页面文件	
-					import {ButtonPage} from '../pages/button/button';
-			b. 在 declarations 数组中，添加 ButtonPage
-			c. 在 entryComponents 数组中，添加 ButtonPage
-	23.2 修改 pages/home/home.ts 文件
-			a. 引入 ButtonPage
-					import {ButtonPage} from '../button/button';
-			b. 在 HomePage 类中声明属性 buttonPage
-			c. 在 HomePage 类的构造器中初始化 buttonPage
+22. button
+	22.1 基本按钮
+	22.2 外边框按钮
+	22.3 无边框按钮
+	22.4 圆角按钮
+	22.5 圆角块级按钮
+	22.6 非圆角块级按钮
+23. Ionic 创建页面
+	在 Ionic-1709N/app 下执行命令
+	ionic generate page button
+24. Ionic 页面跳转
+	24.1 修改文件 src/app/app.module.ts
+        a. 引入新创建的页面文件
+                import {ButtonPage} from '../pages/button/button';
+        b. 在 declarations 数组中，添加 ButtonPage
+        c. 在 entryComponents 数组中，添加 ButtonPage
+	24.2 修改 pages/home/home.ts 文件
+        a. 引入 ButtonPage
+                import {ButtonPage} from '../button/button';
+        b. 在 HomePage 类中声明属性 buttonPage
+        c. 在 HomePage 类的构造器中初始化 buttonPage
 					this.buttonPage = ButtonPage;
-	23.3 修改 pages/home/home.html 文件
-			a. 添加一个按钮
-					<button ion-button>按钮示例</button>
-			b. 为 button 添加属性
+	24.3 修改 pages/home/home.html 文件
+        a. 添加一个按钮
+                <button ion-button>按钮示例</button>
+        b. 为 button 添加属性
 					[navPush]="buttonPage"
-24. List 组件
-	24.1 创建新页面 list: ionic g page list
-	24.2 从 HomePage 点击按钮跳向 ListPage
-25. List
-	25.1 基本列表
-	25.2 按钮作为列表项
-	25.3 列表边距
-	25.4 无分隔线列表
-	25.5 列表分隔项
-	25.6 列表头部
-	25.7 图标列表项
+25. List 组件
+	25.1 创建新页面 list: ionic g page list
+	25.2 从 HomePage 点击按钮跳向 ListPage
+26. List
+	26.1 基本列表
+	26.2 按钮作为列表项
+	26.3 列表边距
+	26.4 无分隔线列表
+	26.5 列表分隔项
+	26.6 列表头部
+	26.7 图标列表项
