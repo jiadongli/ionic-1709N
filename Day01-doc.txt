@@ -99,3 +99,8 @@ WEBAPP Day01
 	26.5 列表分隔项
 	26.6 列表头部
 	26.7 图标列表项
+	26.7 头像作为列表项
+		a. https://iconfinder.com/
+		b. app/src/assets/avatars/default.png
+		c. <img src="assets/avatars/default.png"/>
+	26.8 滑动列表项
