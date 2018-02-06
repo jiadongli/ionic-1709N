@@ -39,10 +39,12 @@ WEBAPP Day01
 		ionic start app blank
 	15.1 目录下，按 Shift + 鼠标右键 - 打开命令行
 	15.2 Webstorm: Alt + F12 打开命令行
-	15.3 命令的作用：使用 blank 模板创建一个 ionic 的项目，名字为 app
+	15.3 命令的作用：使用 blank 空项目模板创建一个 ionic 的项目，名字为 app
 	15.4 创建完成后，Ctrl + C 终止后续操作
-	15.5 在 app 下执行命令：npm install，根据 package.json配置文件自动下载项目（开发）依赖
+	15.5 在 app 下执行命令：npm install，根据 package.json 配置文件自动下载项目（开发）依赖
 16. 无网络：解压缩 app-blank.zip 为 app 目录，放到项目目录下 ionic-1709N/app
+17. 运行 app 项目：
+		app 下执行命令: ionic serve -l
  
 
 
