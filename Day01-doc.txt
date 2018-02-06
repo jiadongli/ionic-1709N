@@ -104,3 +104,5 @@ WEBAPP Day01
 		b. app/src/assets/avatars/default.png
 		c. <img src="assets/avatars/default.png"/>
 	26.8 滑动列表项
+
+练习：实现商品列表(京东首页搜索 “手机”)
