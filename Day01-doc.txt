@@ -80,3 +80,14 @@ WEBAPP Day01
 					<button ion-button>按钮示例</button>
 			b. 为 button 添加属性
 					[navPush]="buttonPage"
+24. List 组件
+	24.1 创建新页面 list: ionic g page list
+	24.2 从 HomePage 点击按钮跳向 ListPage
+25. List
+	25.1 基本列表
+	25.2 按钮作为列表项
+	25.3 列表边距
+	25.4 无分隔线列表
+	25.5 列表分隔项
+	25.6 列表头部
+	25.7 图标列表项
