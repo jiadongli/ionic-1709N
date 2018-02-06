@@ -55,3 +55,28 @@ WEBAPP Day01
 
 二、Ionic 基本组件
 21. button
+	21.1 基本按钮
+	21.2 外边框按钮
+	21.3 无边框按钮
+	21.4 圆角按钮
+	21.5 圆角块级按钮
+	21.6 非圆角块级按钮
+22. Ionic 创建页面
+	在 Ionic-1709N/app 下执行命令：ionic generate page button
+23. Ionic 页面跳转
+	23.1 修改文件 src/app/app.module.ts
+			a. 引入新创建的页面文件	
+					import {ButtonPage} from '../pages/button/button';
+			b. 在 declarations 数组中，添加 ButtonPage
+			c. 在 entryComponents 数组中，添加 ButtonPage
+	23.2 修改 pages/home/home.ts 文件
+			a. 引入 ButtonPage
+					import {ButtonPage} from '../button/button';
+			b. 在 HomePage 类中声明属性 buttonPage
+			c. 在 HomePage 类的构造器中初始化 buttonPage
+					this.buttonPage = ButtonPage;
+	23.3 修改 pages/home/home.html 文件
+			a. 添加一个按钮
+					<button ion-button>按钮示例</button>
+			b. 为 button 添加属性
+					[navPush]="buttonPage"
