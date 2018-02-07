@@ -34,3 +34,8 @@ WEBAPP Day02
     5.4 press 点按
     5.5 pan 滑动
     5.6 swipe 轻扫
+6. Grid
+    6.1 Grid 12栅格系统
+    6.2 创建页面 grid，点击 HomePage 跳转到 GridPage
+
+
