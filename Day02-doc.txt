@@ -37,5 +37,10 @@ WEBAPP Day02
 6. Grid
     6.1 Grid 12栅格系统
     6.2 创建页面 grid，点击 HomePage 跳转到 GridPage
+    6.3 等分栅格
+    6.4 指定宽度
+    6.5 自动宽度
+    6.6 列偏移
+    6.7 垂直对齐
 
 
