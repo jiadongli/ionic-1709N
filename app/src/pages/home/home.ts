@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {ButtonPage} from '../button/button';
 import {ListPage} from '../list/list';
+import {CardPage} from '../card/card'
 
 @Component({
   selector: 'page-home',
@@ -11,10 +12,12 @@ export class HomePage {
 
   buttonPage;
   listPage;
+  cardPage;
 
   constructor(public navCtrl: NavController) {
     this.buttonPage = ButtonPage;
     this.listPage = ListPage;
+    this.cardPage = CardPage;
   }
 
 }
