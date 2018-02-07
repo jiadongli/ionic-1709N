@@ -18,12 +18,17 @@ export class GesturePage {
   tapNumber: number = 0;
   pressNumber: number = 0;
   panNumber: number = 0;
+  swipeNumber: number = 0;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GesturePage');
+  }
+
+  swipeEvent(): void {
+    this.swipeNumber++;
   }
 
   panEvent(): void {

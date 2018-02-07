@@ -28,10 +28,17 @@
     </ion-item>
   </ion-card>
 
-  <p>pan 移动</p>
+  <p>pan 滑动</p>
   <ion-card (pan)="panEvent()">
     <ion-item>
       paned: {{panNumber}}
+    </ion-item>
+  </ion-card>
+
+  <p>swipe 轻扫</p>
+  <ion-card (swipe)="swipeEvent()">
+    <ion-item>
+      swiped: {{swipeNumber}}
     </ion-item>
   </ion-card>
 </ion-content>
