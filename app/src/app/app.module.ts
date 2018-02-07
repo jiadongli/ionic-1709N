@@ -12,6 +12,7 @@ import {CardPage} from '../pages/card/card';
 import {FabPage} from '../pages/fab/fab';
 import {GesturePage} from '../pages/gesture/gesture';
 import {GridPage} from '../pages/grid/grid';
+import {FormPage} from '../pages/form/form';
 
 // Ctrl + w(ord) 增量选择
 // Ctrl + Shift + w(ord) 减量选择
@@ -25,7 +26,8 @@ import {GridPage} from '../pages/grid/grid';
     CardPage,
     FabPage,
     GesturePage,
-    GridPage
+    GridPage,
+    FormPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import {GridPage} from '../pages/grid/grid';
     CardPage,
     FabPage,
     GesturePage,
-    GridPage
+    GridPage,
+    FormPage
   ],
   providers: [
     StatusBar,
