@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 
 /**
  * Generated class for the GesturePage page.
@@ -15,7 +15,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GesturePage {
 
-  tapNumber:number = 0;
+  tapNumber: number = 0;
+  pressNumber: number = 0;
+  panNumber: number = 0;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -24,7 +26,15 @@ export class GesturePage {
     console.log('ionViewDidLoad GesturePage');
   }
 
-  tapEvent():void {
+  panEvent(): void {
+    this.panNumber++;
+  }
+
+  pressEvent(): void {
+    this.pressNumber++;
+  }
+
+  tapEvent(): void {
     this.tapNumber++;
   }
 

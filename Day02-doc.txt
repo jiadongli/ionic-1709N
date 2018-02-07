@@ -32,5 +32,5 @@ WEBAPP Day02
     5.2 创建页面 gesture，点击 HomePage 跳转到 GesturePage
     5.3 tap 轻点
     5.4 press 点按
-    5.5 pan ？
+    5.5 pan 滑动
     5.6 swipe 滑动

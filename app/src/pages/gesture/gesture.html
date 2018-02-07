@@ -20,4 +20,18 @@
       tapped: {{tapNumber}}
     </ion-item>
   </ion-card>
+
+  <p>press 点按</p>
+  <ion-card (press)="pressEvent()">
+    <ion-item>
+      pressed: {{pressNumber}}
+    </ion-item>
+  </ion-card>
+
+  <p>pan 移动</p>
+  <ion-card (pan)="panEvent()">
+    <ion-item>
+      paned: {{panNumber}}
+    </ion-item>
+  </ion-card>
 </ion-content>
