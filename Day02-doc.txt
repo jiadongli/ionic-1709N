@@ -43,7 +43,7 @@ WEBAPP Day02
     6.6 列偏移
     6.7 垂直对齐
 7. Form
-    7.1 6.2 创建页面 form，点击 HomePage 跳转到 FormPage
+    7.1 创建页面 form，点击 HomePage 跳转到 FormPage
     7.2 文本输入框
     7.3 密码输入框
     7.4 复选框
@@ -52,4 +52,10 @@ WEBAPP Day02
     7.7 下拉列表
     7.8 范围滑块
     7.9 开关按钮
+
+8. Toast
+    8.1 Toast 吐司
+    8.2 创建页面 toast，点击 HomePage 跳转到 ToastPage
+    8.3 导入 ToastController
+    8.4
 
