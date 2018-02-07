@@ -134,7 +134,7 @@
 
   <p>数据来自于控制器</p>
   <ion-list>
-    <button *ngFor="let item of items" ion-item>{{item}}</button>
+    <button *ngFor="let item of items" (click)="selectItem(item)" ion-item>{{item}}</button>
   </ion-list>
 
 </ion-content>

@@ -10,3 +10,13 @@ WEBAPP Day02
     1.3 npm start
     1.4 start 是一个默认名，只有 start 可以在执行时 npm start，其它的命令需要执行 npm run 命令名
 2. 列表项数据来自于服务器端
+    2.1 在控制器中定义数据数组 items
+    2.2 在列表里使用循环展示列表项
+        ... *ngFor="let item of items">{{item}}...
+    2.3 添加点击列表项事件
+        在页面中添加点击事件 (click)="selectItem(item)"
+        在控制器中定义方法: selectItem(item: string) {// ...}
+
+3.
+
+10:30

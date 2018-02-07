@@ -15,6 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ListPage {
 
+  // todo 发起一次 HTTP 请求，获取服务器端数据
   items = [
     'HTML',
     'CSS',
@@ -30,6 +31,10 @@ export class ListPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListPage');
+  }
+
+  selectItem(item: string) {
+    console.error(`selected: ${item}`);
   }
 
 }
