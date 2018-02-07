@@ -15,6 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ListPage {
 
+  items = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'Angular',
+    'Node.js',
+    'React',
+    'Ionic'
+  ];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
