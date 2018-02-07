@@ -57,5 +57,7 @@ WEBAPP Day02
     8.1 Toast 吐司
     8.2 创建页面 toast，点击 HomePage 跳转到 ToastPage
     8.3 导入 ToastController
-    8.4
+    8.4 依赖注入 Constructor
+    8.5 定义 toast
+    8.6 呈现 present 17:33
 

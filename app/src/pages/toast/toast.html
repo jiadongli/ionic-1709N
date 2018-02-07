@@ -15,6 +15,10 @@
 
 <ion-content padding>
 <button ion-button block (tap)="showToast()">Toast</button>
+<button ion-button block (tap)="showToastPosition('bottom')">Toast Position bottom (default)</button>
+<button ion-button block (tap)="showToastPosition('top')">Toast Position top</button>
+<button ion-button block (tap)="showToastPosition('middle')">Toast Position middle</button>
+<button ion-button block (tap)="showToastClose()">Toast Close</button>
 
 </ion-content>
 

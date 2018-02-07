@@ -15,6 +15,7 @@ import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angula
 })
 export class ToastPage {
 
+  // DI = Dependency Injection 依赖注入
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
   }
 
@@ -26,6 +27,24 @@ export class ToastPage {
     let toast = this.toastCtrl.create({
       message: 'a basic toast...',
       duration: 1000
+    });
+    toast.present();
+  }
+
+  showToastPosition(position: string): void {
+    let toast = this.toastCtrl.create({
+      message: 'position toast...',
+      duration: 2000,
+      position: position
+    });
+    toast.present(); // Android: toast.show();
+  }
+
+  showToastClose():void {
+    let toast = this.toastCtrl.create({
+      message: 'toast with close...',
+      showCloseButton: true,
+      closeButtonText: 'OK'
     });
     toast.present();
   }
