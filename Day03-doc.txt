@@ -3,10 +3,20 @@ WEBAPP Day03
 1. 用户注册页面和登录页面（Email/password）
 2. 在 HomePage 中添加用户登录表单
     2.1 Email
-    2.2 password
+    2.2 Password
     2.3 登录提交按钮
 
 3. 在 HomePage 中添加注册按钮
 
-. 数据库、表的设计（db.user）
+4. 创建用户注册页面，sign-up
+    4.1 Email
+    4.2 Username
+    4.3 Password
+    4.4 Gender
+    4.5 Age
+    4.6 注册提交按钮
+
+5. HomePage 跳转到 SignUpPage
+
+6. 数据库、表的设计（db.user）
 
