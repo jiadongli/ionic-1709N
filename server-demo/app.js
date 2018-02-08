@@ -3,19 +3,18 @@
  */
 
 const express = require('express');
+const bodyParser = require('body-parser');
 
 let app = new express();
 
-app.get('/', (req, res) => {
-  // req = request
-  // res = response
-  // ...
-  res.end('It works.')
-});
+// 配置中间件 middleware
+app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/signUp', (req, res) => {
-  let email = req.query.email;
-  res.end(`email: ${email}`);
+app.post('/signUp', (req, res) => {
+  // let email = req.query.email; // GET
+  let email = req.body.email;
+  let password = req.body.password;
+  res.end(`email: ${email}, password: ${password}`);
 });
 
 app.listen(3000);
