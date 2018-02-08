@@ -9,6 +9,7 @@ import {GridPage} from '../grid/grid'
 import {FormPage} from '../form/form'
 import {ToastPage} from '../toast/toast'
 import {AlertPage} from '../alert/alert'
+import {IconPage} from '../icon/icon'
 
 @Component({
   selector: 'page-home',
@@ -25,6 +26,7 @@ export class HomePage {
   formPage;
   toastPage;
   alertPage;
+  iconPage;
 
   constructor(public navCtrl: NavController) {
     this.buttonPage = ButtonPage;
@@ -36,6 +38,7 @@ export class HomePage {
     this.formPage = FormPage;
     this.toastPage = ToastPage;
     this.alertPage = AlertPage;
+    this.iconPage = IconPage;
   }
 
 }

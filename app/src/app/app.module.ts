@@ -15,6 +15,7 @@ import {GridPage} from '../pages/grid/grid';
 import {FormPage} from '../pages/form/form';
 import {ToastPage} from '../pages/toast/toast';
 import {AlertPage} from '../pages/alert/alert';
+import {IconPage} from '../pages/icon/icon';
 
 // Ctrl + w(ord) 增量选择
 // Ctrl + Shift + w(ord) 减量选择
@@ -31,7 +32,8 @@ import {AlertPage} from '../pages/alert/alert';
     GridPage,
     FormPage,
     ToastPage,
-    AlertPage
+    AlertPage,
+    IconPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import {AlertPage} from '../pages/alert/alert';
     GridPage,
     FormPage,
     ToastPage,
-    AlertPage
+    AlertPage,
+    IconPage
   ],
   providers: [
     StatusBar,

@@ -20,3 +20,13 @@ WEBAPP Day03
 
 6. 数据库、表的设计（db.user）
 
+7. Icon
+    7.1 创建页面 icon，HomePage 跳转到 IconPage
+    7.2 <ion-icon name="图表名"></ion-icon>
+    7.3 可以使用关于字体的任何样式
+    7.4 针对不用系统 <ion-icon ios="苹果图标名" md="安卓图标名"></ion-icon>、
+    7.5 属性绑定 [name]="name 的变量名"
+    7.6 http://www.iconfont.cn
+
+8. InfiniteScroll
+
