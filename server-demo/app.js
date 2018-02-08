@@ -7,12 +7,17 @@ const express = require('express');
 let app = new express();
 
 app.get('/', (req, res) => {
-    // req = request
-    // res = response
-    // ...
-    res.end('It works.')
+  // req = request
+  // res = response
+  // ...
+  res.end('It works.')
 });
-// 15:35
+
+app.get('/signUp', (req, res) => {
+  let email = req.query.email;
+  res.end(`email: ${email}`);
+});
+
 app.listen(3000);
 
 // Alt + Shift + F10
