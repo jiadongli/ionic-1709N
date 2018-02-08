@@ -14,3 +14,10 @@ CREATE TABLE db.user(
 
 SELECT *
 FROM db.user;
+
+-- 查询字段注释
+SHOW FULL COLUMNS FORM db.user;
+
+-- 查询表的注释
+USE db;
+SHOW TABLE STATUS WHERE name='user';
