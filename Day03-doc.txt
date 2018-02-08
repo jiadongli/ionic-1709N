@@ -48,6 +48,17 @@ WEBAPP Day03
 13. 使用 express 创建一个简单的服务器端
     13.1 server-demo/ 下执行 npm i -S express
     13.2 编辑 app.js 文件，创建服务器
+    13.3 运行 app.js
+    13.4 浏览器访问服务器端
 
 14. 无网络：
+    14.1 解压缩 server-demo.zip
+    14.2 在 server-demo/ 创建文件 app.js
+    14.3 编辑 app.js 文件，创建服务器
+    14.4 运行 app.js
+    14.5 浏览器访问服务器端
+
+15. 端口号占用问题
+    15.1 netstat -ano | findstr 端口号
+    15.2 taskkill /f /pid 进程 ID
 
