@@ -1,5 +1,7 @@
 WEBAPP Day03
 
+一、客户端，组件
+
 1. 用户注册页面和登录页面（Email/password）
 2. 在 HomePage 中添加用户登录表单
     2.1 Email
@@ -8,7 +10,7 @@ WEBAPP Day03
 
 3. 在 HomePage 中添加注册按钮
 
-4. 创建用户注册页面，sign-up
+4. 创建用户注册页面 SignUpPage
     4.1 Email
     4.2 Username
     4.3 Password
@@ -29,4 +31,23 @@ WEBAPP Day03
     7.6 http://www.iconfont.cn
 
 8. InfiniteScroll
+
+二、 搭建 Ionic 应用的服务器端
+
+9. 创建目录 server-demo
+10. 在 server-demo/ 下执行：npm init 生成 package.json
+11. 创建文件 server-demo/app.js
+12. Node.js 的模块
+    12.1 核心模块：http path fs global
+        直接引入 require 再使用
+    12.2 第三方模块：express mysql
+        下载安装，再引入，再使用
+    12.3 自定义模块
+        a. 文件模块
+        b. 目录模块
+13. 使用 express 创建一个简单的服务器端
+    13.1 server-demo/ 下执行 npm i -S express
+    13.2 编辑 app.js 文件，创建服务器
+
+14. 无网络：
 
