@@ -32,12 +32,11 @@ export class ToastPage {
   }
 
   showToastPosition(position: string): void {
-    let toast = this.toastCtrl.create({
+    this.toastCtrl.create({
       message: 'position toast...',
       duration: 2000,
       position: position
-    });
-    toast.present(); // Android: toast.show();
+    }).present(); // Android: toast.show();
   }
 
   showToastClose():void {

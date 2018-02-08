@@ -63,4 +63,11 @@ WEBAPP Day02
 
 9. Alert
     9.1 创建页面 toast，点击 HomePage 跳转到 ToastPage
+    9.2 导入 AlertController
+    9.3 依赖注入 Constructor
+    9.4 定义 alert
+    9.5 呈现 present
+
+10. 完成用户注册页面和登录页面（Email/password）
+    同时完成数据库、表的设计（db.user）
 
