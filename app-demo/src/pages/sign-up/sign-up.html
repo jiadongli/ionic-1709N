@@ -20,38 +20,38 @@
       <ion-input [(ngModel)]="user.email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input></ion-input>
+      <ion-label floating>Username {{user.username}}</ion-label>
+      <ion-input [(ngModel)]="user.username"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-label floating>Password {{user.password}}</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
     </ion-item>
-    <ion-list-header>Gender</ion-list-header>
-    <ion-list radio-group>
+    <ion-list-header>Gender {{user.gender}}</ion-list-header>
+    <ion-list radio-group [(ngModel)]="user.gender">
       <ion-item>
         <ion-label>Male</ion-label>
-        <ion-radio checked></ion-radio>
+        <ion-radio checked value="male"></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>Female</ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="female"></ion-radio>
       </ion-item>
     </ion-list>
     <ion-item>
-      <ion-label floating>Age</ion-label>
-      <ion-input></ion-input>
+      <ion-label floating>Age {{user.age}}</ion-label>
+      <ion-input [(ngModel)]="user.age"></ion-input>
     </ion-item>
-    <ion-list-header>City</ion-list-header>
+    <ion-list-header>City {{user.city}}</ion-list-header>
     <ion-item>
-      <ion-select>
-        <ion-option>Beijing</ion-option>
-        <ion-option>Shanghai</ion-option>
-        <ion-option>Guangzhou</ion-option>
+      <ion-select [(ngModel)]="user.city">
+        <ion-option value="Beijing">Beijing</ion-option>
+        <ion-option value="Shanghai" selected>Shanghai</ion-option>
+        <ion-option value="Guangzhou">Guangzhou</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
-  <button ion-button block color="secondary">Sign up</button>
+  <button (tap)="signUp()" ion-button block color="secondary">Sign up</button>
 </ion-content>
 
 

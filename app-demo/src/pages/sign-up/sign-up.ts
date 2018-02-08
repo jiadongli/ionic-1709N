@@ -19,9 +19,9 @@ export class SignUpPage {
     email: '',
     username: '',
     password: '',
-    gender: '',
+    gender: 'male',
     age: '',
-    city: ''
+    city: 'Shanghai'
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -29,6 +29,12 @@ export class SignUpPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignUpPage');
+  }
+
+  signUp():void {
+    console.error(`user:`, this.user);
+
+    // todo HTTP -> Server
   }
 
 }
