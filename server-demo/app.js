@@ -14,6 +14,9 @@ app.post('/signUp', (req, res) => {
   // let email = req.query.email; // GET
   let email = req.body.email;
   let password = req.body.password;
+
+  // todo MySQL
+
   res.end(`email: ${email}, password: ${password}`);
 });
 
