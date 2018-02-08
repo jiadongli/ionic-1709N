@@ -55,10 +55,23 @@ WEBAPP Day03
     14.1 解压缩 server-demo.zip
     14.2 在 server-demo/ 创建文件 app.js
     14.3 编辑 app.js 文件，创建服务器
+         const express = require('express');
+         let app = new express();
+         app.listen(3000);
+
     14.4 运行 app.js
+         server-demo/ 执行 node app
     14.5 浏览器访问服务器端
+         http://127.0.0.1:3000
 
 15. 端口号占用问题
     15.1 netstat -ano | findstr 端口号
     15.2 taskkill /f /pid 进程 ID
+
+16. HTTP 请求的提交方式
+    16.1 GET
+    16.2 POST
+    16.3 DELETE
+    16.4 PUT
+    ...
 
