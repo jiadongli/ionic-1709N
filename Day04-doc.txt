@@ -49,7 +49,38 @@ WEBAPP Day03
    8.2 注册失败：res.send({"status":"err"});
 
 9. 客户端接收响应，并做处理
-   9.1 status 是 exist，邮箱存在，不能注册，提示消息
-   9.1 status 是 ok，页面跳转到 HomePage
-   9.2 status 是 err，提示错误消息
+   9.1 status 是 exist，邮箱存在，不能注册
+       提示消息 alert
+   9.2 status 是 ok，页面跳转到 HomePage
+       // HomePage lazying loading
+       this.navCtrl = 'HomePage';
+   9.3 status 是 err，提示错误消息 toast
+
+
+练习：完成用户注册，用户登录
+
+
+10. node -v Node.js 的版本是 6
+   10.1 卸载 Node.js
+        开始-控制面板-程序-卸载-Node.js-卸载
+   10.2 FTP 下载 Day04/node-v8.9.4-x64.msi
+   10.3 安装 node-v8.9.4-x64.msi
+   10.4 FTP 下载 Day04/node_modules.zip
+   10.5 解压缩 node_modules.zip 替换 app-demo/node_modules
+
+11. Github 在 Webstorm 里的基本配置
+    11.1 安装 git 软件
+         https://git-scm.com
+    11.2 File - Settings 里，搜 git，点 Test 测试
+    11.3 File - Settings 里，搜 github，选 password，Test
+    11.4 在 Webstorm 中任意位置创建文件 .gitconfig
+         [user]
+             name = thu
+             email = mingfei.net@gmail.com
+    11.5 把 .gitconfig 放到用户目录下
+    11.6 提交项目前，创建文件 .gitignore，排除忽略的文件
+    11.6 提交项目前，创建文件 README.md，项目说明文件
+    11.7 把项目发布到 GitHub：VCS - Import into Version Control - Share Project on GitHub
+    11.8 代码更新后，快捷键 Ctrl + K，提交-推送 commit-push
+
 

@@ -42,7 +42,7 @@ app.post('/signUp', (req, res) => {
       // sign up success
       res.send({"status": "ok"});
     } else {
-      // sign up failed
+      // sign up failed 很少发生
       res.send({"status": "err"});
     }
   });
