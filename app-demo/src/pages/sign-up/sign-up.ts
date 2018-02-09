@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
-// import {HttpClient} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 
 /**
  * Generated class for the SignUpPage page.
@@ -25,7 +25,7 @@ export class SignUpPage {
     city: 'Shanghai'
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient) {
   }
 
   ionViewDidLoad() {
@@ -33,22 +33,18 @@ export class SignUpPage {
   }
 
   signUp(): void {
-    console.error(`user:`, this.user);
-
-    // todo HTTP -> Server
-
     let url = 'http://127.0.0.1:3000/signUp';
-    // this.httpClient.post(url, {email: this.user.email, password: this.user.password})
-    //   .subscribe(
-    //     (res) => {
-    //         console.error(res);
-    //         // todo
-    //     },
-    //     (error) => {
-    //         console.error(error);
-    //         // todo
-    //     }
-    //   );
+    this.httpClient.post(url, {email: this.user.email, password: this.user.password})
+      .subscribe(
+        (res) => {
+            console.error(res);
+            // todo
+        },
+        (err) => {
+            console.error(err);
+            // todo
+        }
+      );
   }
-
+// 11:45
 }

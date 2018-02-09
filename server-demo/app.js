@@ -10,10 +10,9 @@ let app = new express();
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.post('/signUp', (req, res) => {
-  let username = req.body.username;
+  let email = req.body.email;
   let password = req.body.password;
-  res.end(`username: ${username}, password: ${password}`);
 });
-
+// 10:50
 
 app.listen(3000);
