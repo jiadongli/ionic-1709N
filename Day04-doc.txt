@@ -17,10 +17,39 @@ WEBAPP Day03
    app.use(bodyParser.json());
    因为 Ionic 使用 HttpClient 提交请求的数据都是自动转为 JSON 格式
 
-5. 错误信息
+5. 服务器返回 JSON 响应
+   res.send({"status":"ok"});
+
+6. 错误信息
    HttpErrorResponse
    error: Object
    headers:...
    ...
    url: "http://localhost:8100/signUp"
+
+   三处需要注意的地方：
+   a. app-demo/ionic.config.json
+      proxy 设置正确
+      重启客户端
+   b. this.httpClient.post('/signUp',...
+   c. app.js 中，res.send({"status":"ok"});
+
+7. 服务器端处理用户注册请求
+   7.1 下载安装 mysql 第三方模块为项目依赖
+       server-demo/ 执行：npm i -S mysql
+   7.2 引入 mysql 模块
+   7.3 创建一个数据库连接池 pool
+       池化技术
+   7.4 定义 SQL 语句
+   7.5 执行 SQL 语句
+   7.6 判断执行结果
+
+8. 服务器端返回响应
+   8.1 注册成功：res.send({"status":"ok"});
+   8.2 注册失败：res.send({"status":"err"});
+
+9. 客户端接收响应，并做处理
+   9.1 status 是 exist，邮箱存在，不能注册，提示消息
+   9.1 status 是 ok，页面跳转到 HomePage
+   9.2 status 是 err，提示错误消息
 

@@ -4,6 +4,11 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const mysql = require('mysql');
+
+let pool = mysql.createPool({
+  user: 'root'
+});
 
 let app = new express();
 
@@ -12,11 +17,35 @@ let app = new express();
 app.use(bodyParser.json());
 
 app.post('/signUp', (req, res) => {
-  let email = req.body.email;
-  let password = req.body.password;
-  console.log(`email: ${email}, password: ${password}`);
-  // todo MySQL
-  res.send({"status":"ok"});
+  let user = req.body.user;
+
+  // todo check email
+  let sql = 'SELECT * FROM db.user WHERE email = ?';
+  pool.query(sql, [user.email], (err, results) => {
+    if (results.length === 1) {
+      res.send({"status":"exist"});
+    }
+  });
+
+  sql = 'INSERT INTO db.user VALUE(NULL, ?, ?, ?, ?, ?, ?)';
+
+  pool.query(sql, [
+    user.email,
+    user.username,
+    user.password,
+    user.gender,
+    user.age,
+    user.city
+  ], (err, results) => {
+    if (err) throw err;
+    if (results.affectedRows === 1) {
+      // sign up success
+      res.send({"status": "ok"});
+    } else {
+      // sign up failed
+      res.send({"status": "err"});
+    }
+  });
 });
 
 app.listen(3000);

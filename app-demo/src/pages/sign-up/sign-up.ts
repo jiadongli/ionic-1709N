@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
 import {HttpClient} from '@angular/common/http';
 
 /**
@@ -25,7 +25,7 @@ export class SignUpPage {
     city: 'Shanghai'
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -33,11 +33,16 @@ export class SignUpPage {
   }
 
   signUp(): void {
-    this.httpClient.post('/signUp', {email: this.user.email, password: this.user.password})
+    this.httpClient.post('/signUp', {user:this.user})
       .subscribe(
         res => {
-            console.error(res);
-            // todo
+          if (res['status'] === 'exist') {
+            this.alertCtrl.create({
+              title: 'Error',
+              subTitle: 'Email is already exist.',
+              buttons:['OK']
+            }).present();
+          }
         },
         err => {
             console.error(err);
