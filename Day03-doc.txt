@@ -67,23 +67,31 @@ WEBAPP Day03
 15. supervisor 可以实现服务器端热部署
     15.1 执行 npm i -g supervisor
     15.2 无网络：解压缩 supervisor.zip
-         supervisor 和 supervisor.cmd 文件放在
-         用户目录/AppData/Roming/npm/ 下
-         supervisor 目录放在
-         用户目录/AppData/Roming/npm/node_modules/ 下
+         a. supervisor 和 supervisor.cmd 文件放在
+            用户目录/AppData/Roming/npm/ 下
+         b. supervisor 目录放在
+            用户目录/AppData/Roming/npm/node_modules/ 下
     15.3 关掉之前的服务，在 server-demo/ 下执行 supervisor app
          再输入 rs
 
-16. 端口号占用问题
+16. EADDRINUSE:::3000 端口号占用问题
     16.1 netstat -ano | findstr 端口号
     16.2 taskkill /f /pid 进程 ID
 
 17. HTTP 请求的提交方式
-    17.1 GET (web 表单，默认)
-    17.2 POST (web 表单，method="post")
+    17.1 GET (表单，默认) 不安全，字符串长度有限
+    17.2 POST (表单，method="post"，需要显式声明) 安全，信息大小不限
     17.3 DELETE
     17.4 PUT
     17.5 ...
+
+18. 在服务器端 Express 获取请求信息
+    18.1 GET：req.query.key
+    18.2 POST: Express 需要配置 body-parser 中间件
+         a. 下载安装 body-parser 为项目的依赖，在 server-demo/ 执行 npm i -S body-parser
+         b. 在 server-demo/app.js，引入 body-parser，配置 body-parser
+         c.
+
 
 18. Ionic App 客户端，获取用户在表单填写的信息
     18.1 在控制器中定义一个 user={xxx:'',...} 对象

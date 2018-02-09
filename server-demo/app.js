@@ -3,14 +3,16 @@
  */
 
 const express = require('express');
-
+const bodyParser = require('body-parser');
 
 let app = new express();
 
-app.get('/', (req, res) => {
-  let username = req.query.username;
-   // ...
-  res.end(`username: ${username}`);
+app.use(bodyParser.urlencoded({extended:true}));
+
+app.post('/signUp', (req, res) => {
+  let username = req.body.username;
+  let password = req.body.password;
+  res.end(`username: ${username}, password: ${password}`);
 });
 
 

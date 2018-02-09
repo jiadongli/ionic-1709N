@@ -7,8 +7,9 @@
 <body>
 <a href="http://127.0.0.1:3000">链接提交的请求都是 GET</a>
 
-<form action="http://127.0.0.1:3000">
-  <input type="text" name="username" placeholder="USERNAME">
+<form action="http://127.0.0.1:3000/signUp" method="post">
+  <input type="text" name="username" placeholder="USERNAME"><br>
+  <input type="password" name="password" placeholder="PASSWORD"><br>
   <input type="submit" value="SUBMIT">
 </form>
 </body>
