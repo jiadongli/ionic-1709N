@@ -39,12 +39,12 @@ WEBAPP Day03
 11. 创建文件 server-demo/app.js
 12. Node.js 的模块
     12.1 核心模块：http path fs global
-        直接引入 require 再使用
-    12.2 第三方模块：express mysql
-        下载安装，再引入，再使用
+         直接引入 require 再使用
+    12.2 第三方模块：express mysql body-parser supervisor
+         下载安装，再引入，再使用
     12.3 自定义模块
-        a. 文件模块
-        b. 目录模块
+         a. 文件模块
+         b. 目录模块
 13. 使用 express 创建一个简单的服务器端
     13.1 server-demo/ 下执行 npm i -S express
     13.2 编辑 app.js 文件，创建服务器
@@ -64,23 +64,33 @@ WEBAPP Day03
     14.5 浏览器访问服务器端
          http://127.0.0.1:3000
 
-15. 端口号占用问题
-    15.1 netstat -ano | findstr 端口号
-    15.2 taskkill /f /pid 进程 ID
+15. supervisor 可以实现服务器端热部署
+    15.1 执行 npm i -g supervisor
+    15.2 无网络：解压缩 supervisor.zip
+         supervisor 和 supervisor.cmd 文件放在
+         用户目录/AppData/Roming/npm/ 下
+         supervisor 目录放在
+         用户目录/AppData/Roming/npm/node_modules/ 下
+    15.3 关掉之前的服务，在 server-demo/ 下执行 supervisor app
+         再输入 rs
 
-16. HTTP 请求的提交方式
-    16.1 GET
-    16.2 POST
-    16.3 DELETE
-    16.4 PUT
-    ...
+16. 端口号占用问题
+    16.1 netstat -ano | findstr 端口号
+    16.2 taskkill /f /pid 进程 ID
 
-17. Ionic App 客户端，获取用户在表单填写的信息
-    17.1 在控制器中定义一个 user={xxx:'',...} 对象
-    17.2 在表单页面做数据双向绑定 [(ngModel)]="user.xxx" {{user.xxx}}
-    17.3 在控制器里获取用户填写的表单信息
+17. HTTP 请求的提交方式
+    17.1 GET (web 表单，默认)
+    17.2 POST (web 表单，method="post")
+    17.3 DELETE
+    17.4 PUT
+    17.5 ...
 
-18. 在服务器端接收用户的注册请求：/signUp
+18. Ionic App 客户端，获取用户在表单填写的信息
+    18.1 在控制器中定义一个 user={xxx:'',...} 对象
+    18.2 在表单页面做数据双向绑定 [(ngModel)]="user.xxx" {{user.xxx}}
+    18.3 在控制器里获取用户填写的表单信息
+
+19. 在服务器端接收用户的注册请求：/signUp
 
 练习：完成用户注册请求的处理
 
