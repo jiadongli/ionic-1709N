@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.post('/signUp', (req, res) => {
   let email = req.body.email;
   let password = req.body.password;
+  console.log(`email: ${email}, password: ${password}`);
+  // todo MySQL
+  res.send('{"status":"ok"}');
 });
 // 10:50
 

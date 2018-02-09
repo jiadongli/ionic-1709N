@@ -33,18 +33,17 @@ export class SignUpPage {
   }
 
   signUp(): void {
-    let url = 'http://127.0.0.1:3000/signUp';
+    let url = '/signUp';
     this.httpClient.post(url, {email: this.user.email, password: this.user.password})
       .subscribe(
-        (res) => {
+        res => {
             console.error(res);
             // todo
         },
-        (err) => {
+        err => {
             console.error(err);
             // todo
         }
       );
   }
-// 11:45
 }

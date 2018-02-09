@@ -90,7 +90,7 @@ WEBAPP Day03
     18.2 POST: Express 需要配置 body-parser 中间件
          a. 下载安装 body-parser 为项目的依赖，在 server-demo/ 执行 npm i -S body-parser
          b. 在 server-demo/app.js，引入 body-parser，配置 body-parser
-         c.
+         c. 获取 post 请求信息：req.body.key
 
 
 19. Ionic App 客户端，获取用户在表单填写的信息

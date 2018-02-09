@@ -1,0 +1,5 @@
+WEBAPP Day03
+
+1. Ionic 的跨域问题
+   修改 app-demo/ionic.config.json 文件
+
