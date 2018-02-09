@@ -16,7 +16,7 @@ app.post('/signUp', (req, res) => {
   let password = req.body.password;
   console.log(`email: ${email}, password: ${password}`);
   // todo MySQL
-  res.send('{"status":"ok"}');
+  res.send({"status":"ok"});
 });
 
 app.listen(3000);

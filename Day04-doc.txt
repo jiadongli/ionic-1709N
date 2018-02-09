@@ -11,7 +11,16 @@ WEBAPP Day03
           "proxyUrl": "http://127.0.0.1:3000/signUP"
         }
      ]
+   重启客户端
+
 4. 修改 server/demo/app.js 文件，添加 body-parser 中间件的配置项
    app.use(bodyParser.json());
    因为 Ionic 使用 HttpClient 提交请求的数据都是自动转为 JSON 格式
+
+5. 错误信息
+   HttpErrorResponse
+   error: Object
+   headers:...
+   ...
+   url: "http://localhost:8100/signUp"
 

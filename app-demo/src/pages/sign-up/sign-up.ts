@@ -33,8 +33,7 @@ export class SignUpPage {
   }
 
   signUp(): void {
-    let url = '/signUp';
-    this.httpClient.post(url, {email: this.user.email, password: this.user.password})
+    this.httpClient.post('/signUp', {email: this.user.email, password: this.user.password})
       .subscribe(
         res => {
             console.error(res);
