@@ -7,7 +7,9 @@ const bodyParser = require('body-parser');
 
 let app = new express();
 
-app.use(bodyParser.urlencoded({extended:true}));
+// Express 中间件 middleware 的配置
+// app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 
 app.post('/signUp', (req, res) => {
   let email = req.body.email;
@@ -16,6 +18,5 @@ app.post('/signUp', (req, res) => {
   // todo MySQL
   res.send('{"status":"ok"}');
 });
-// 10:50
 
 app.listen(3000);

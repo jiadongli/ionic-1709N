@@ -1,5 +1,17 @@
 WEBAPP Day03
 
-1. Ionic 的跨域问题
-   修改 app-demo/ionic.config.json 文件
+1. Ionic 的跨域(CORS Cross Origin Resources Share)问题
+   客户端 http://127.0.0.1:8100
+   服务器 http://127.0.0.1:3000
+2. Ionic 服务器代理方式结局
+3. 修改 app-demo/ionic.config.json 文件
+   "proxies": [
+        {
+          "path": "/signUp",
+          "proxyUrl": "http://127.0.0.1:3000/signUP"
+        }
+     ]
+4. 修改 server/demo/app.js 文件，添加 body-parser 中间件的配置项
+   app.use(bodyParser.json());
+   因为 Ionic 使用 HttpClient 提交请求的数据都是自动转为 JSON 格式
 

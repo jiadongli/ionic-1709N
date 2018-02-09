@@ -99,7 +99,7 @@ WEBAPP Day03
     19.3 在控制器里获取用户填写的表单信息
 
 20. Ionic App 客户端发送 HTTP 请求到服务器端
-    20.1 修改 app.module.ts 文件，加载 HttpClient 模块
+    20.1 修改 app.module.ts 文件，加载 HttpClientModule 模块
         a. import {HttpClientModule} from '@angular/common/http';
         b. 在 imports 数组中添加 HttpClientModule
     20.2 修改 sigin-up.ts 文件
