@@ -9,14 +9,14 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-label floating>Email</ion-label>
-      <ion-input></ion-input>
+      <ion-label floating>Email {{user.email}}</ion-label>
+      <ion-input [(ngModel)]="user.email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-label floating>Password {{user.password}}</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
     </ion-item>
   </ion-list>
-  <button ion-button block>Sign in</button>
+  <button (tap)="signIn()" ion-button block>Sign in</button>
   <button (tap)="signUpPage()" ion-button block color="secondary">Sign up</button>
 </ion-content>

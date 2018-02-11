@@ -31,6 +31,20 @@ WEBAPP Day05
        删除 HomePage 的引入
        rootPage:any = 'HomePage';
 
+6. 用户登录的实现
+   6.1 在 home.ts 定义 user 对象
+   6.2 在 home.html 表单数据的双向绑定
+   6.3 在 home.ts 定义登录提交的处理函数 signIn() {}
+   6.4 在 home.html 为登录按钮添加事件响应
+   6.5 在 app.js 中，接收登录的 post 请求，路径 /signIn
+   6.6 在 home.ts 中，发送登录请求 HttpClient
+       a. 引入 HttpClient
+       b. 依赖注入 httpClient
+       c. 使用 this.httpClient 发送登录的 post 请求
+   6.7 跨域问题，修改 ionic.config.json，添加代理
+   6.8 在 app.js 中，具体处理请求
+   6.9 在 home.ts 中接收响应，并做处理
+
 
 
 
