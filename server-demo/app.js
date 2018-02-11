@@ -23,7 +23,7 @@ app.post('/signUp', (req, res) => {
   let sql = 'SELECT * FROM db.user WHERE email = ?';
   pool.query(sql, [user.email], (err, results) => {
     if (results.length === 1) {
-      res.send({"status":"err"});
+      res.send({"status":"exist"});
     }
   });
 

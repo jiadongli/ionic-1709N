@@ -18,5 +18,5 @@
     </ion-item>
   </ion-list>
   <button ion-button block>Sign in</button>
-  <button [navPush]="signUpPage" ion-button block color="secondary">Sign up</button>
+  <button (tap)="signUpPage()" ion-button block color="secondary">Sign up</button>
 </ion-content>

@@ -2,13 +2,6 @@ import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, AlertController, ToastController} from 'ionic-angular';
 import {HttpClient} from '@angular/common/http';
 
-/**
- * Generated class for the SignUpPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-sign-up',
@@ -54,7 +47,7 @@ export class SignUpPage {
           } else {
             // status 是 ok
             // 页面跳转 HomePage
-            // this.navCtrl.push('HomePage');
+            this.navCtrl.push('HomePage');
           }
         },
         err => {

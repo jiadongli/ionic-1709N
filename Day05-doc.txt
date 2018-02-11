@@ -8,7 +8,7 @@ WEBAPP Day05
 2. localhost 拒绝了我们的连接请求
 
 3. lazy loading
-    3.1 创建新 页面：ionic g page test
+    3.1 创建新页面：ionic g page test
     3.2 修改 home.ts 定义函数
         其中 push 函数的参数时页面导出类的类名字符串
         toTestPage():void {
@@ -19,6 +19,17 @@ WEBAPP Day05
 
 4. lazy loading
    在用户访问某个页面时，这个页面才进行加载
+
+5. HomePage 改成 lazy loading
+   5.1 在 home/ 下创建一个文件 home.module.ts
+   5.2 修改 home/home.ts 文件
+       import IonicPage
+       @IonicPage()
+   5.3 修改 app/app.module.ts 文件
+       删除 HomePage 的引入
+   5.4 修改 app/app.component.ts 文件
+       删除 HomePage 的引入
+       rootPage:any = 'HomePage';
 
 
 
