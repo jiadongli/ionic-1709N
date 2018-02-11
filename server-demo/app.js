@@ -55,6 +55,7 @@ app.post('/signIn', (req, res) => {
   let sql = 'SELECT * FROM db.user WHERE email = ? AND password = ?';
   pool.query(sql, [user.email, user.password], (err, results) => {
     if (err) throw err;
+    // Ctrl + Alt + T
     if (results.length === 1) {
       // sign in successful
       res.send({"status": "ok"});
