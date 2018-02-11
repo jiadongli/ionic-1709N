@@ -1,15 +1,5 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-// import {ButtonPage} from '../button/button';
-import {ListPage} from '../list/list';
-import {CardPage} from '../card/card'
-import {FabPage} from '../fab/fab'
-import {GesturePage} from '../gesture/gesture'
-import {GridPage} from '../grid/grid'
-import {FormPage} from '../form/form'
-import {ToastPage} from '../toast/toast'
-import {AlertPage} from '../alert/alert'
-import {IconPage} from '../icon/icon'
 
 @Component({
   selector: 'page-home',
@@ -17,36 +7,63 @@ import {IconPage} from '../icon/icon'
 })
 export class HomePage {
 
-  // buttonPage;
-  listPage;
-  cardPage;
-  fabPage;
-  gesturePage;
-  gridPage;
-  formPage;
-  toastPage;
-  alertPage;
-  iconPage;
-
   constructor(public navCtrl: NavController) {
-    // this.buttonPage = ButtonPage;
-    this.listPage = ListPage;
-    this.cardPage = CardPage;
-    this.fabPage = FabPage;
-    this.gesturePage = GesturePage;
-    this.gridPage = GridPage;
-    this.formPage = FormPage;
-    this.toastPage = ToastPage;
-    this.alertPage = AlertPage;
-    this.iconPage = IconPage;
   }
 
-  toButtonPage():void {
-    this.navCtrl.push('ButtonPage');
-  }
+  // 代码类似，重构？
 
-  toTestPage(): void {
-    this.navCtrl.push('TestPage');
+  navToPage(page: string): void {
+    // this.navCtrl.push(page);
+    switch (page) {
+      case 'TestPage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      case 'ListPage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      case 'CardPage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      case 'ButtonPage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      case 'FabPage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      case 'GesturePage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      case 'GridPage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      case 'FormPage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      case 'ToastPage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      case 'AlertPage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      case 'IconPage': {
+        this.navCtrl.push(page);
+        break;
+      }
+      // cases...
+      default : {
+        break;
+      }
+    }
   }
 
 }

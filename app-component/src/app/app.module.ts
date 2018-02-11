@@ -6,16 +6,6 @@ import {StatusBar} from '@ionic-native/status-bar';
 
 import {MyApp} from './app.component';
 import {HomePage} from '../pages/home/home';
-// import {ButtonPage} from '../pages/button/button';
-import {ListPage} from '../pages/list/list';
-import {CardPage} from '../pages/card/card';
-import {FabPage} from '../pages/fab/fab';
-import {GesturePage} from '../pages/gesture/gesture';
-import {GridPage} from '../pages/grid/grid';
-import {FormPage} from '../pages/form/form';
-import {ToastPage} from '../pages/toast/toast';
-import {AlertPage} from '../pages/alert/alert';
-import {IconPage} from '../pages/icon/icon';
 
 // Ctrl + w(ord) 增量选择
 // Ctrl + Shift + w(ord) 减量选择
@@ -23,17 +13,7 @@ import {IconPage} from '../pages/icon/icon';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    // ButtonPage,
-    ListPage,
-    CardPage,
-    FabPage,
-    GesturePage,
-    GridPage,
-    FormPage,
-    ToastPage,
-    AlertPage,
-    IconPage
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -42,17 +22,7 @@ import {IconPage} from '../pages/icon/icon';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    // ButtonPage,
-    ListPage,
-    CardPage,
-    FabPage,
-    GesturePage,
-    GridPage,
-    FormPage,
-    ToastPage,
-    AlertPage,
-    IconPage
+    HomePage
   ],
   providers: [
     StatusBar,

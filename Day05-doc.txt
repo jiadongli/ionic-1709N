@@ -9,13 +9,18 @@ WEBAPP Day05
 
 3. lazy loading
     3.1 创建新 页面：ionic g page test
-    3.2 修改 home.ts
-        定义函数
+    3.2 修改 home.ts 定义函数
+        其中 push 函数的参数时页面导出类的类名字符串
         toTestPage():void {
-            this.navCtrl.push('TestPage');
+            this.navCtrl.push('TestPage'); // *****
         }
     3.3 修改 home.html，添加按钮
         <button ... (tap)="toTestPage()" ...>Test Page</button>
+
+4. lazy loading
+   在用户访问某个页面时，这个页面才进行加载
+
+
 
 
 

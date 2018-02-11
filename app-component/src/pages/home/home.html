@@ -7,15 +7,15 @@
 </ion-header>
 
 <ion-content>
-  <button ion-button full (tap)="toTestPage()">Test Page</button>
-  <button ion-button full (tap)="toButtonPage()">按钮示例</button>
-  <button ion-button full [navPush]="listPage">列表示例</button>
-  <button ion-button full [navPush]="cardPage">卡片示例</button>
-  <button ion-button full [navPush]="fabPage">FAB 示例</button>
-  <button ion-button full [navPush]="gesturePage">手势动作示例</button>
-  <button ion-button full [navPush]="gridPage">栅格系统示例</button>
-  <button ion-button full [navPush]="formPage">表单示例</button>
-  <button ion-button full [navPush]="toastPage">Toast 示例</button>
-  <button ion-button full [navPush]="alertPage">Alert 示例</button>
-  <button ion-button full [navPush]="iconPage">Icon 示例</button>
+  <button ion-button full (tap)="navToPage('TestPage')">Test Page</button>
+  <button ion-button full (tap)="navToPage('ButtonPage')">按钮示例</button>
+  <button ion-button full (tap)="navToPage('ListPage')">列表示例</button>
+  <button ion-button full (tap)="navToPage('CardPage')">卡片示例</button>
+  <button ion-button full (tap)="navToPage('FabPage')">FAB 示例</button>
+  <button ion-button full (tap)="navToPage('GesturePage')">手势动作示例</button>
+  <button ion-button full (tap)="navToPage('GridPage')">栅格系统示例</button>
+  <button ion-button full (tap)="navToPage('FormPage')">表单示例</button>
+  <button ion-button full (tap)="navToPage('ToastPage')">Toast 示例</button>
+  <button ion-button full (tap)="navToPage('AlertPage')">Alert 示例</button>
+  <button ion-button full (tap)="navToPage('IconPage')">Icon 示例</button>
 </ion-content>
