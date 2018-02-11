@@ -54,7 +54,7 @@ export class SignUpPage {
           } else {
             // status 是 ok
             // 页面跳转 HomePage
-            this.navCtrl.push('TestPage');
+            // this.navCtrl.push('HomePage');
           }
         },
         err => {

@@ -19,11 +19,11 @@ app.use(bodyParser.json());
 app.post('/signUp', (req, res) => {
   let user = req.body.user;
 
-  // todo check email
+  // check email
   let sql = 'SELECT * FROM db.user WHERE email = ?';
   pool.query(sql, [user.email], (err, results) => {
     if (results.length === 1) {
-      res.send({"status":"exist"});
+      res.send({"status":"err"});
     }
   });
 

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {ButtonPage} from '../button/button';
+// import {ButtonPage} from '../button/button';
 import {ListPage} from '../list/list';
 import {CardPage} from '../card/card'
 import {FabPage} from '../fab/fab'
@@ -17,7 +17,7 @@ import {IconPage} from '../icon/icon'
 })
 export class HomePage {
 
-  buttonPage;
+  // buttonPage;
   listPage;
   cardPage;
   fabPage;
@@ -29,7 +29,7 @@ export class HomePage {
   iconPage;
 
   constructor(public navCtrl: NavController) {
-    this.buttonPage = ButtonPage;
+    // this.buttonPage = ButtonPage;
     this.listPage = ListPage;
     this.cardPage = CardPage;
     this.fabPage = FabPage;
@@ -39,6 +39,14 @@ export class HomePage {
     this.toastPage = ToastPage;
     this.alertPage = AlertPage;
     this.iconPage = IconPage;
+  }
+
+  toButtonPage():void {
+    this.navCtrl.push('ButtonPage');
+  }
+
+  toTestPage(): void {
+    this.navCtrl.push('TestPage');
   }
 
 }
