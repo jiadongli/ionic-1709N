@@ -19,6 +19,36 @@ CREATE TABLE db.user (
 )
   COMMENT 'user table';
 
+
+DROP TABLE IF EXISTS db.product;
+CREATE TABLE db.product(
+    id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'id PK',
+    title VARCHAR(255) NOT NULL COMMENT 'title',
+    detail VARCHAR(255) NOT NULL COMMENT 'detail',
+    price DECIMAL(6,2) NOT NULL COMMENT 'price',
+    picture VARCHAR(255) NOT NULL DEFAULT 'product.png' COMMENT 'picture'
+) COMMENT 'product table';
+
+-- 为商品表生成 1000 条样本数据
+DROP PROCEDURE IF EXISTS db.gen_sample_data;
+DELIMITER $$
+CREATE PROCEDURE db.gen_sample_data()
+    BEGIN
+        DECLARE counter INT DEFAULT 0;
+        WHILE counter < 1000 DO
+            INSERT INTO db.product(title, detail, price)
+            VALUE(
+                CONCAT('title: ', counter),
+                CONCAT('product detail: ', counter),
+                FLOOR(RAND() * 10000)
+            );
+            SET counter = counter + 1;
+        END WHILE;
+    END $$
+DELIMITER;
+
+CALL db.gen_sample_data();
+
 -- 查询字段注释
 SHOW FULL COLUMNS FROM db.user;
 
@@ -29,3 +59,8 @@ WHERE name = 'user';
 
 SELECT *
 FROM db.user;
+
+SELECT *
+FROM db.product
+LIMIT 20 OFFSET 0;
+--LIMIT 0, 20;

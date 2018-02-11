@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {HttpClient} from '@angular/common/http';
 
 /**
  * Generated class for the IndexPage page.
@@ -15,29 +16,29 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 })
 export class IndexPage {
 
-  items = [];
+  products = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    for (let i = 0; i < 30; i++) {
-      this.items.push(this.items.length);
-    }
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public httpClient: HttpClient) {
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad IndexPage');
+    console.error('IndexPage 视图加载完成');
+    let url = '/product/1';
+    this.httpClient.get(url, {})
+      .subscribe(
+        res => {
+          console.error(res);
+        },
+        err => {
+          console.error(err);
+        }
+      );
   }
 
   doInfinite(event): void {
-    // 定时器的作用是模拟 HTTP 请求的一个时间延迟
-    console.error('load more data...');
-    setTimeout(() => {
-      for (let i = 0; i < 30; i++) {
-        this.items.push(this.items.length);
-      }
-      console.error('data loaded...');
-      // todo HTTP
-      event.complete();
-    }, 3000);
   }
 
 }
