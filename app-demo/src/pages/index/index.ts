@@ -26,7 +26,7 @@ export class IndexPage {
 
   ionViewDidLoad() {
     console.error('IndexPage 视图加载完成');
-    let url = '/products/1';
+    let url = `/products/1`;
     this.httpClient.get(url)
       .subscribe(
         res => {
@@ -38,7 +38,17 @@ export class IndexPage {
       );
   }
 
-  doInfinite(event): void {
+  loadMoreData(event): void {
+    let url = `/products/2`;
+    this.httpClient.get(url)
+      .subscribe(
+        res => {
+          console.error(res);
+        },
+        err => {
+          console.error(err);
+        }
+      );
   }
-
+// WebStorm live template
 }
