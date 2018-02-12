@@ -17,6 +17,7 @@ import {HttpClient} from '@angular/common/http';
 export class IndexPage {
 
   products;
+  page: number = 1;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -26,7 +27,7 @@ export class IndexPage {
 
   ionViewDidLoad() {
     console.error('IndexPage 视图加载完成');
-    let url = `/products/1`;
+    let url = `/products/${this.page}`;
     this.httpClient.get(url)
       .subscribe(
         res => {
@@ -38,17 +39,21 @@ export class IndexPage {
       );
   }
 
-  loadMoreData(event): void {
-    let url = `/products/2`;
+  loadMoreData(infiniteScrollEvent): void {
+    let url = `/products/${++this.page}`;
     this.httpClient.get(url)
       .subscribe(
         res => {
-          console.error(res);
+          console.error(`current page: `, this.page, res);
+          // 在原有 JSON 数组的基础上，添加新一页的数据
+          this.products = this.products.concat(res);
+          infiniteScrollEvent.complete();
         },
         err => {
           console.error(err);
         }
       );
   }
+
 // WebStorm live template
 }

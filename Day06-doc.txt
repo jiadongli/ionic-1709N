@@ -28,13 +28,15 @@ WEBAPP Day06
         this.httpClient.get(url)
           .subscribe(
             res => {
-              console.error(res);
+              this.products = this.products.concat(res);
             },
             err => {
               console.error(err);
             }
           );
       }
+
+5. 在 index.ts 中，定义 page 变量属性
 
 
 

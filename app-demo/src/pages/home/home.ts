@@ -10,8 +10,8 @@ import {HttpClient} from '@angular/common/http';
 export class HomePage {
 
   user = {
-    email: '',
-    password: ''
+    email: 'tom@tom.com',
+    password: '123'
   };
 
   constructor(public navCtrl: NavController,

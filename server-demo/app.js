@@ -68,7 +68,7 @@ app.post('/signIn', (req, res) => {
 app.get('/products/:page', (req, res) => {
   let page = req.params.page;
   const pageSize = 20; // 每页记录数量
-  let sql = `SELECT title
+  let sql = `SELECT *
                 FROM db.product 
                 LIMIT ${pageSize} 
                 OFFSET ?`;
