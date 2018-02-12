@@ -16,7 +16,13 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item *ngFor="let product of products">{{product.detail}}</ion-item>
+    <ion-item *ngFor="let product of products">
+      <ion-thumbnail item-start>
+        <img src="assets/products/{{product.picture}}">
+      </ion-thumbnail>
+      <h2>{{product.title}}</h2>
+      <p>{{product.detail}}</p>
+    </ion-item>
   </ion-list>
 
   <ion-infinite-scroll (ionInfinite)="loadMoreData($event)">
