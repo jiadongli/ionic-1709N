@@ -26,7 +26,7 @@ export class IndexPage {
 
   ionViewDidLoad() {
     console.error('IndexPage 视图加载完成');
-    let url = '/product/1';
+    let url = '/products/1';
     this.httpClient.get(url, {})
       .subscribe(
         res => {

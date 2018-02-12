@@ -26,26 +26,25 @@ CREATE TABLE db.product(
     title VARCHAR(255) NOT NULL COMMENT 'title',
     detail VARCHAR(255) NOT NULL COMMENT 'detail',
     price DECIMAL(6,2) NOT NULL COMMENT 'price',
-    picture VARCHAR(255) NOT NULL DEFAULT 'product.png' COMMENT 'picture'
+    picture VARCHAR(255) NOT NULL DEFAULT 'default.png' COMMENT 'picture'
 ) COMMENT 'product table';
 
 -- 为商品表生成 1000 条样本数据
 DROP PROCEDURE IF EXISTS db.gen_sample_data;
 DELIMITER $$
 CREATE PROCEDURE db.gen_sample_data()
-    BEGIN
-        DECLARE counter INT DEFAULT 0;
-        WHILE counter < 1000 DO
-            INSERT INTO db.product(title, detail, price)
-            VALUE(
-                CONCAT('title: ', counter),
-                CONCAT('product detail: ', counter),
-                FLOOR(RAND() * 10000)
-            );
-            SET counter = counter + 1;
-        END WHILE;
-    END $$
-DELIMITER;
+              BEGIN
+                  DECLARE counter INT DEFAULT 0;
+                  WHILE counter < 1000 DO
+                      INSERT INTO db.product(title, detail, price)
+                      VALUE(
+                          CONCAT('title: ', counter + 1),
+                          CONCAT('product detail info: ', counter + 1),
+                          FLOOR(RAND() * 10000)
+                      );
+                      SET counter = counter + 1;
+                  END WHILE;
+              END $$
 
 CALL db.gen_sample_data();
 

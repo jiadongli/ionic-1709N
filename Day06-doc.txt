@@ -1,0 +1,73 @@
+WEBAPP Day06
+
+1. Ionic 跨域，代理的设置进行简化
+    1.1 app-demo/ionic.config.json
+    1.2 proxies: [
+            {
+                "path": "/",
+                "proxyUrl": "http://127.0.0.1:3000/"
+            }
+        ]
+
+2. 请求路径参数的获取
+    2.1 发送 /products/1
+    2.1 获取
+        a. app.get('/products/:page', (req, res) => {});
+        b. req.params.page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

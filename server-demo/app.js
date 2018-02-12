@@ -50,7 +50,6 @@ app.post('/signUp', (req, res) => {
 
 app.post('/signIn', (req, res) => {
   let user = req.body.user;
-  console.log(`user: `, user);
 
   let sql = 'SELECT * FROM db.user WHERE email = ? AND password = ?';
   pool.query(sql, [user.email, user.password], (err, results) => {
@@ -66,7 +65,7 @@ app.post('/signIn', (req, res) => {
   });
 });
 
-app.get('/product/:page', (req, res) => {
+app.get('/products/:page', (req, res) => {
   let page = req.params.page;
   const pageSize = 20;
   let sql = 'SELECT title FROM db.product LIMIT ? OFFSET ?';
