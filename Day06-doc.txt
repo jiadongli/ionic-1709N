@@ -56,6 +56,28 @@ WEBAPP Day06
 12. 不做"多余"的一次请求
     请求数据时传回总页数，当前页码等于总页数，hasMoreData = false
 
+13. 创建商品详情页面
+    app-demo/ ionic g page product
+
+14. 为商品列表中的商品添加轻点事件
+    <div (tap)="productPage(product.id)" ...
+
+15. 在 index.ts 中，定义函数 productPage
+    productPage(productId):void {
+        this.navCtrl.push('ProductPage', {productId:productId});
+    }
+
+16. 页面跳转的同时传递参数
+    this.navCtrl.push('ProductPage', {productId:productId});
+
+17. 传参之后，取得参数的方式
+    在 product.ts 中
+    this.navParams.get('productId');
+
+18. 在商品详情页中展示商品的图片，横向滚动
+
+19. 修改 db.sql，新建 picture 表
+
 
 
 

@@ -73,16 +73,11 @@ app.get('/products/:page', (req, res) => {
                 LIMIT ${pageSize} 
                 OFFSET ?`;
 
-  let sqlCount = `SELECT * FROM db.product`;
+  // 数据库视图 View v_product product.* + totalRow
 
   pool.query(sql, [pageSize * (page - 1)], (err, results) => {
     if (err) throw err;
-    let data = results;
-    pool.query(sqlCount, (err, results) => {
-      let rows = results.length;
-      let totalPage = Math.ceil(rows / pageSize);
-      res.send({"data": data, "totalPage": totalPage});
-    });
+    res.send(results);
   })
 });
 

@@ -27,12 +27,11 @@ export class IndexPage {
   }
 
   ionViewDidLoad() {
-    console.error('IndexPage 视图加载完成');
     let url = `/products/${this.page}`;
     this.httpClient.get(url)
       .subscribe(
         res => {
-          this.products = res['data'];
+          this.products = res;
         },
         err => {
           console.error(err);
@@ -44,13 +43,13 @@ export class IndexPage {
     let url = `/products/${++this.page}`;
     this.httpClient.get(url)
       .subscribe(
-        res => { // res: {"data": data, "totalPage": totalPage}
-          console.error(`current page: `, this.page, res);
-          if (this.page === res['totalPage']) {
+        res => {
+          let length = res['length'];
+          if (length < 20 || length === 0) {
             this.hasMoreData = false;
           } else {
             // 在原有 JSON 数组的基础上，添加新一页的数据
-            this.products = this.products.concat(res['data']);
+            this.products = this.products.concat(res);
           }
           infiniteScrollEvent.complete();
         },
@@ -58,6 +57,10 @@ export class IndexPage {
           console.error(err);
         }
       );
+  }
+
+  productPage(productId): void {
+    this.navCtrl.push('ProductPage', {productId: productId});
   }
 
 // WebStorm live template
