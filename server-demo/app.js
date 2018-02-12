@@ -84,6 +84,7 @@ app.get('/products/:page', (req, res) => {
 app.get('/pictures/:productId', (req, res) => {
   let productId = req.params.productId;
 
+  // 实际：这里是一个关联查询，查询商品的所有详情信息
   let sql = 'SELECT * FROM db.picture WHERE productId = ?';
   pool.query(sql, [productId], (err, results) => {
     if (err) throw err;
