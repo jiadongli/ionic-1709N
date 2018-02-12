@@ -16,7 +16,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class IndexPage {
 
-  products = [];
+  products;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -27,10 +27,10 @@ export class IndexPage {
   ionViewDidLoad() {
     console.error('IndexPage 视图加载完成');
     let url = '/products/1';
-    this.httpClient.get(url, {})
+    this.httpClient.get(url)
       .subscribe(
         res => {
-          console.error(res);
+          this.products = res;
         },
         err => {
           console.error(err);

@@ -9,7 +9,7 @@ WEBAPP Day06
             }
         ]
 
-2. 请求路径参数的获取
+2. 请求路径参数(path parameters)的获取
     2.1 发送 /products/1
     2.1 获取
         a. app.get('/products/:page', (req, res) => {});

@@ -67,12 +67,14 @@ app.post('/signIn', (req, res) => {
 
 app.get('/products/:page', (req, res) => {
   let page = req.params.page;
-  const pageSize = 20;
-  let sql = 'SELECT title FROM db.product LIMIT ? OFFSET ?';
+  const pageSize = 20; // 每页记录数量
+  let sql = `SELECT title 
+                FROM db.product 
+                LIMIT ${pageSize} OFFSET ?`;
 
-  pool.query(sql, [pageSize, (page - 1) * 20], (err, results) => {
+  pool.query(sql, [(page - 1) * pageSize], (err, results) => {
     if (err) throw err;
-    req.send(results);
+    res.send(results);
   })
 });
 
