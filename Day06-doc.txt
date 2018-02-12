@@ -40,6 +40,8 @@ WEBAPP Day06
 
 6. thumbnail list
 
+7. list > cards
+
 
 
 
