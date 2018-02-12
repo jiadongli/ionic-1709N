@@ -42,6 +42,21 @@ WEBAPP Day06
 
 7. list > cards
 
+8. 无限滚动的一个问题：
+   数据全部加载之后，无限滚动还会继续请求数据，会加重服务器负担
+
+9. 在 index.ts 中定义属性 hasMoreData:boolean = true;
+
+10. 在 index.ts 中，每次加载新数据时，判断数据是否全部加载完毕
+    如果加载完毕，把 hasMoreData 赋值为 false
+
+11. 在 index.html 中，为 ion-infinite-scroll 添加属性
+    *ngIf="hasMoreData"
+
+12. 不做"多余"的一次请求
+    请求数据时传回总页数，当前页码等于总页数，hasMoreData = false
+
+
 
 
 

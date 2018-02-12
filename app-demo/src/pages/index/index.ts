@@ -18,6 +18,7 @@ export class IndexPage {
 
   products;
   page: number = 1;
+  hasMoreData: boolean = true;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -31,7 +32,7 @@ export class IndexPage {
     this.httpClient.get(url)
       .subscribe(
         res => {
-          this.products = res;
+          this.products = res['data'];
         },
         err => {
           console.error(err);
@@ -43,10 +44,14 @@ export class IndexPage {
     let url = `/products/${++this.page}`;
     this.httpClient.get(url)
       .subscribe(
-        res => {
+        res => { // res: {"data": data, "totalPage": totalPage}
           console.error(`current page: `, this.page, res);
-          // 在原有 JSON 数组的基础上，添加新一页的数据
-          this.products = this.products.concat(res);
+          if (this.page === res['totalPage']) {
+            this.hasMoreData = false;
+          } else {
+            // 在原有 JSON 数组的基础上，添加新一页的数据
+            this.products = this.products.concat(res['data']);
+          }
           infiniteScrollEvent.complete();
         },
         err => {

@@ -73,9 +73,16 @@ app.get('/products/:page', (req, res) => {
                 LIMIT ${pageSize} 
                 OFFSET ?`;
 
+  let sqlCount = `SELECT * FROM db.product`;
+
   pool.query(sql, [pageSize * (page - 1)], (err, results) => {
     if (err) throw err;
-    res.send(results);
+    let data = results;
+    pool.query(sqlCount, (err, results) => {
+      let rows = results.length;
+      let totalPage = Math.ceil(rows / pageSize);
+      res.send({"data": data, "totalPage": totalPage});
+    });
   })
 });
 
