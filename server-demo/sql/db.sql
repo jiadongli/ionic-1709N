@@ -19,7 +19,6 @@ CREATE TABLE db.user (
 )
   COMMENT 'user table';
 
-
 DROP TABLE IF EXISTS db.product;
 CREATE TABLE db.product(
     id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'id PK',
@@ -28,6 +27,26 @@ CREATE TABLE db.product(
     price DECIMAL(6,2) NOT NULL COMMENT 'price',
     picture VARCHAR(255) NOT NULL DEFAULT 'default.png' COMMENT 'picture'
 ) COMMENT 'product table';
+
+
+DROP TABLE IF EXISTS db.picture;
+CREATE TABLE db.picture(
+    id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'id PK',
+    name VARCHAR(255) NOT NULL COMMENT '图片文件名',
+    productId INT COMMENT '商品 id FK'
+) COMMENT 'picture table';
+
+-- 为图片表追加外键
+ALTER TABLE db.picture
+ADD CONSTRAINT
+picture_fk_productId
+FOREIGN KEY(productId)
+REFERENCES db.product(id);
+
+INSERT INTO db.picture VALUE(NULL, '1.jpg', 1);
+INSERT INTO db.picture VALUE(NULL, '2.jpg', 1);
+INSERT INTO db.picture VALUE(NULL, '3.jpg', 1);
+INSERT INTO db.picture VALUE(NULL, '4.jpg', 1);
 
 -- 为商品表生成 1000 条样本数据
 DROP PROCEDURE IF EXISTS db.gen_sample_data;

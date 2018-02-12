@@ -81,4 +81,20 @@ app.get('/products/:page', (req, res) => {
   })
 });
 
+app.get('/pictures/:productId', (req, res) => {
+  let productId = req.params.productId;
+
+  let sql = 'SELECT * FROM db.picture WHERE productId = ?';
+  pool.query(sql, [productId], (err, results) => {
+    if (err) throw err;
+    /*
+        {
+          "status":"ok",
+          "data": []
+        }
+     */
+    res.send(results);
+  })
+});
+
 app.listen(3000);

@@ -76,7 +76,24 @@ WEBAPP Day06
 
 18. 在商品详情页中展示商品的图片，横向滚动
 
-19. 修改 db.sql，新建 picture 表
+19. 修改 db.sql，新建 picture 表，外键 productId
+
+20. 更新了 Node.js 版本：
+    客户端启动时可以运行，之后退出
+    event.js:183
+        throw er: // Unhandled 'error' event
+    Error: spawn "C:\Program Files\nodejs\node.exe" ENOENT
+        at...
+        at...
+    解决：File-Settings-Editor-File Encodings
+         把右侧所有的 Encoding 设置为 UTF-8
+         OK
+
+21. 在 product.ts 文件，发起请求查询当前商品的展示图片
+
+22. 在 app.js 中，接收请求，把 res 赋值给属性 pictures
+
+23. 在 product.html 中，展示商品图片的横向视图
 
 
 
