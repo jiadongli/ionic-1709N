@@ -23,6 +23,18 @@ WEBAPP Day06
 
 4. 在 index.ts 中，定义 loadMoreData 函数
     再次请求服务器，获取下一页数据
+    loadMoreData(event): void {
+        let url = `/products/2`;
+        this.httpClient.get(url)
+          .subscribe(
+            res => {
+              console.error(res);
+            },
+            err => {
+              console.error(err);
+            }
+          );
+      }
 
 
 
