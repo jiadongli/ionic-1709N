@@ -17,9 +17,19 @@ WEBAPP Day06
    {{product[0]?.title}}
    product 数据的返回是异步的，加 ? 号: 数据返回时，再获取属性 title
 
-5. 用户登录认证问题
+5. 用户登录信息的保存问题 session
 
-6. 在 app.module.ts 中，
+6. 在 app.module.ts 中
+    6.1 引入 IonicStorageModule 模块
+        import {IonicStorageModule} from '@ionic/storage';
+    6.2 在 imports 中添加
+        IonicStorageModule.forRoot()
+
+7. 在 home.ts 中，引入 Storage
+   7.1 import {Storage} from '@ionic/storage';
+   7.2 把 storage 依赖注入到构造器中 private storage: Storage
+   7.3 保存用户登录信息 this.storage.set('key', value);
+
 
 
 
