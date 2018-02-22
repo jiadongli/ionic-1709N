@@ -43,6 +43,14 @@ picture_fk_productId
 FOREIGN KEY(productId)
 REFERENCES db.product(id);
 
+INSERT INTO db.product VALUE (
+    NULL,
+    '商品名称',
+    '商品描述...',
+    123.00
+    '1.png',
+); -- id 1
+
 INSERT INTO db.picture VALUE(NULL, '1.jpg', 1);
 INSERT INTO db.picture VALUE(NULL, '2.jpg', 1);
 INSERT INTO db.picture VALUE(NULL, '3.jpg', 1);

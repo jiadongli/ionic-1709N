@@ -55,6 +55,7 @@ WEBAPP Day06
 
 12. 不做"多余"的一次请求
     请求数据时传回总页数，当前页码等于总页数，hasMoreData = false
+    数据库的视图 view
 
 13. 创建商品详情页面
     app-demo/ ionic g page product
@@ -89,7 +90,7 @@ WEBAPP Day06
          把右侧所有的 Encoding 设置为 UTF-8
          OK
 
-21. 在 product.ts 文件，发起请求查询当前商品的展示图片
+21. 在 product.ts 文件，发起请求查询当前商品的展示图片数组 pictures
 
 22. 在 app.js 中，接收请求，把 res 赋值给属性 pictures
 

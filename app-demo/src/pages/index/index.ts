@@ -41,9 +41,11 @@ export class IndexPage {
 
   loadMoreData(infiniteScrollEvent): void {
     let url = `/products/${++this.page}`;
+    console.error(this.page);
     this.httpClient.get(url)
       .subscribe(
         res => {
+          console.error(res);
           let length = res['length'];
           if (length < 20 || length === 0) {
             this.hasMoreData = false;

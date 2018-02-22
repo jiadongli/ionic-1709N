@@ -18,7 +18,11 @@ export class SignUpPage {
     city: 'Shanghai'
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient, public alertCtrl: AlertController, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public httpClient: HttpClient,
+              public alertCtrl: AlertController,
+              public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -26,7 +30,7 @@ export class SignUpPage {
   }
 
   signUp(): void {
-    this.httpClient.post('/signUp', {user:this.user})
+    this.httpClient.post('/signUp', {user: this.user})
       .subscribe(
         res => {
           let status = res['status'];
@@ -35,7 +39,7 @@ export class SignUpPage {
             this.alertCtrl.create({
               title: 'Error',
               subTitle: 'Email is already exist.',
-              buttons:['OK']
+              buttons: ['OK']
             }).present();
           } else if (status === 'err') {
             // Insert 时发生了其它错误
@@ -51,8 +55,8 @@ export class SignUpPage {
           }
         },
         err => {
-            console.error(err);
-            // todo
+          console.error(err);
+          // todo
         }
       );
   }
