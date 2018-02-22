@@ -1,10 +1,19 @@
 WEBAPP Day06
 
-1. PhoneGap
+1. 商品详情，更多信息的显示
+2. product -> picture (1:N)
+3. 修改 app.js
+   3.1 SQL:
+        SELECT p1.*, p2.name
+        FROM
+        db.product AS p1
+        INNER JOIN
+        db.picture AS p2
+        ON p1.id = p2.productId
+        WHERE p1.id = ?;
+   3.2 请求路径 pictures > product
 
-微信开发 3 days
-    - 微信公众号 1 day
-    - 微信小程序 2 days
+4. 修改 product.html
 
 
 

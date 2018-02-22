@@ -90,3 +90,11 @@ SELECT *
 FROM db.product
 LIMIT 20 OFFSET 0;
 --LIMIT 0, 20;
+
+SELECT p1.*, p2.name
+FROM
+db.product AS p1
+INNER JOIN
+db.picture AS p2
+ON p1.id = p2.productId
+WHERE p1.id = 1;
