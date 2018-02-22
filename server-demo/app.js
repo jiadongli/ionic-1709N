@@ -89,7 +89,7 @@ app.get('/product/:productId', (req, res) => {
   let sql =`SELECT p1.*, p2.name
             FROM
             db.product AS p1
-            INNER JOIN
+            LEFT OUTER JOIN
             db.picture AS p2
             ON p1.id = p2.productId
             WHERE p1.id = ?`;

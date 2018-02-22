@@ -20,10 +20,9 @@
     </ion-slide>
   </ion-slides>
   <div>
-    {{product}}
-    <!--<h2>{{product.title}}</h2>-->
-    <!--<p>{{product.detail}}</p>-->
-    <!--<b style="color: #900">{{product.price}}</b>-->
+    <h2>{{product[0]?.title}}</h2>
+    <p>{{product[0]?.detail}}</p>
+    <b style="color: #900">￥ {{product[0]?.price}}</b>
   </div>
 
 </ion-content>

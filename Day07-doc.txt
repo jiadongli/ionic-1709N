@@ -14,7 +14,12 @@ WEBAPP Day06
    3.2 请求路径 pictures > product
 
 4. 修改 product.html
+   {{product[0]?.title}}
+   product 数据的返回是异步的，加 ? 号: 数据返回时，再获取属性 title
 
+5. 用户登录认证问题
+
+6. 在 app.module.ts 中，
 
 
 

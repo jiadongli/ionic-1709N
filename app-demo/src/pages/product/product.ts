@@ -16,7 +16,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ProductPage {
 
-  product;
+  product:any = [];
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -30,6 +30,7 @@ export class ProductPage {
       .subscribe(
         (res) => {
           this.product = res;
+          console.error(this.product);
         },
         (err) => {
           console.error(err);

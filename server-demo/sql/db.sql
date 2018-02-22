@@ -98,3 +98,6 @@ INNER JOIN
 db.picture AS p2
 ON p1.id = p2.productId
 WHERE p1.id = 1;
+
+-- product picture
+-- product_basic product_picture product_detail
